@@ -1,0 +1,41 @@
+//Dustin Peters
+//1/27/17
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n, count(10);
+	double answer_n, guess, r;
+
+	cout << "This program will compute the square root\n";
+	cout << "of a number using the Babylonian algorithm\n";
+	cout << "Please enter a whole number and press the enter key:\n";
+	cin >> n;
+	cout << "Please enter a 'guess' number to divide by:\n";
+	cin >> guess;
+
+	r = n /guess;
+	guess = (guess + r)/2;
+	
+	while (count > 0)
+	{
+	r = n / guess;
+	guess = (guess + r) / 2;
+
+	if (guess <= (guess * 0.01) + guess)
+		answer_n = guess;
+	else
+	r = n / guess;
+	guess = (guess + r)/2;
+
+	count -= 1;
+}
+cout << "The square root of " << n << " is " << answer_n;
+cout << endl;
+
+system("pause");
+return 0;
+
+}
+

@@ -1,0 +1,27 @@
+//Dustin Peters
+//CPP 2
+// 1/28/17
+
+#include <iostream>
+#include <cmath>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+	double weight, buoyantforce, radius;
+
+
+	cout << "Enter the weight of your sphere in pounds, then press enter. \n";
+	cin >> weight;
+	cout << "Enter the radius of your sphere in feet, then press enter. \n";
+	cin >> radius;
+	buoyantforce =
+		62.4*((4 * 3.14 * radius * radius * radius) / 3);
+	if (buoyantforce > weight)
+		cout << "This sphere is a witch. Burn it! \n";
+	else
+		cout << "Your sphere has been sunk. Game Over. \n";
+	system("pause");
+
+}
